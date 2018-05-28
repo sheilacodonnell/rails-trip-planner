@@ -1,14 +1,2 @@
 <h1>Edit your trip to <%= @trip.city %></h1>
-
-<%= form_for(@trip) do |form| %>
-
-  <label>City:</label><br>
-  <p><%= form.text_field :city %></p>
-  <label>Start date:</label><br>
-  <p><%= form.date_field :start_date %></p>
-  <label>End date:</label><br>
-  <p><%= form.date_field :end_date %></p>
-  <label>Notes:</label><br>
-  <p><%= form.text_area :notes %></p>
-  <p><%= form.submit%></p>
-<% end %>
+  <%= render 'form' %>

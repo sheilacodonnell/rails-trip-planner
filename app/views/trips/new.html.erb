@@ -1,13 +1,2 @@
-<%= form_for(@trip) do |form| %>
-
-  <label>City:</label><br>
-  <p><%= form.text_field :city %></p>
-  <label>Start date:</label><br>
-  <p><%= form.date_field :start_date %></p>
-  <label>End date:</label><br>
-  <p><%= form.date_field :end_date %></p>
-  <label>Notes:</label><br>
-  <p><%= form.text_area :notes %></p>
-  <p><%= form.submit%></p>
-<% end %>
-<p><%= link_to("Back to all entries", trips_path) %></p>
+<h1> Create a new trip </h1>
+<%= render 'form' %>
