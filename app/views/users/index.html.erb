@@ -1,0 +1,7 @@
+Hello <%= current_user.email %>
+
+<% @users.each do |user| %>
+    <li><%= user.email %></li>
+    <li><%= user.trips.map { |t| t.city } %></li>
+
+<% end %>

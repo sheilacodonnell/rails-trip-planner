@@ -1,0 +1,23 @@
+<h2>Here are your trips</h2>
+<% current_user.trips.each do |f| %>
+<ul><%= link_to f.city, trip_path(f) %></ul>
+<% end %>
+<%= link_to "New trip", new_trip_path, class: 'btn btn-primary'%>
+
+
+<h2>Here are all of the trips!</h2>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Creator</th>
+  </tr>
+
+<% @trips.each do |t| %>
+  <tr>
+    <td><%= link_to t.city, trip_path(t)%></td>
+    <td><%= t.user&.email %></td>
+  </tr>
+  <% end %>
+
+</table>
